@@ -2,7 +2,7 @@ import Image from "next/image";
 import {createClient} from '../lib/utils/supabase/server'
 
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
+//import { Skeleton } from "@/components/ui/skeleton";
 import {
   Drawer,
   DrawerClose,
@@ -28,7 +28,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { getBase64ImageUrl } from "@/lib/utils/getBase64ImageUrl";
 
-const generateRandomImgHeight = (max, min) => Math.trunc(Math.random()*(max-min)+min);
+const generateRandomImgHeight = (max: number, min: number) => Math.trunc(Math.random()*(max-min)+min);
 
 export default async function Home() {
     const supabase = createClient();

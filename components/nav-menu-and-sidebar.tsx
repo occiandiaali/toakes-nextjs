@@ -34,9 +34,15 @@ export function NavMenuSidebar() {
             <Package2 className="h-6 w-6" />
             <span className="sr-only">Acme Inc</span>
           </Link> */}
-          <Link
+          {/* <Link
             href="/"
             className="text-muted-foreground transition-colors hover:text-foreground text-red-500"
+          >
+            Toakes
+          </Link> */}
+          <Link
+            href="/"
+            className="text-muted-foreground text-2xl font-bold transition-colors hover:text-foreground text-red-500"
           >
             Toakes
           </Link>
@@ -47,10 +53,10 @@ export function NavMenuSidebar() {
             Search
           </Link>
           <Link
-            href="/chats"
+            href="/create-post"
             className={`link ${pathname === '/chats' ? 'text-foreground text-red-500' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
           >
-            Chats
+            Publish
           </Link>
           <Link
             href="/analytics"
@@ -58,16 +64,17 @@ export function NavMenuSidebar() {
           >
             Analytics
           </Link>
-          <Link
+          {/* <Link
             href="/settings"
             className={`link ${pathname === '/settings' ? 'text-foreground text-red-500' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
           >
             Settings
-          </Link>
+          </Link> */}
 
         </nav>
         <Sheet>
           <SheetTrigger asChild>
+          
             <Button
               variant="outline"
               size="icon"
@@ -76,11 +83,18 @@ export function NavMenuSidebar() {
               <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
+          
           </SheetTrigger>
+             <Link
+            href="/"
+            className="text-muted-foreground md:hidden font-semibold transition-colors hover:text-foreground text-red-500"
+          >
+            Toakes
+          </Link>
           <SheetContent side="left">
             <nav className="grid gap-6 text-lg font-medium">
               <Link
-                href="#"
+                href="/"
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6" />
@@ -170,6 +184,7 @@ export function NavMenuSidebar() {
           </SheetContent>
         </Sheet>
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
+
           {/* <form className="ml-auto flex-1 sm:flex-initial">
             <div className="relative">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -197,6 +212,9 @@ export function NavMenuSidebar() {
               <DropdownMenuSeparator />
               <Link href="/profile">
               <DropdownMenuItem>Profile</DropdownMenuItem>
+              </Link>
+              <Link href="/create-post">
+              <DropdownMenuItem>Publish</DropdownMenuItem>
               </Link>
                <Link href="/support">
               <DropdownMenuItem>Support</DropdownMenuItem>
