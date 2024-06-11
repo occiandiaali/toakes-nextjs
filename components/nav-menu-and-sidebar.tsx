@@ -25,7 +25,7 @@ export function NavMenuSidebar() {
     const pathname = usePathname()
 
   return (
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
+      <header className="z-50 sticky top-0 flex h-16 items-center gap-4 border-b bg-slate-200/75 px-4 md:px-6">
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           {/* <Link
             href="#"
@@ -36,31 +36,31 @@ export function NavMenuSidebar() {
           </Link> */}
           <Link
             href="/"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground text-red-500"
           >
-            Ororo
+            Toakes
           </Link>
           <Link
             href="/search"
-            className={`link ${pathname === '/search' ? 'text-foreground' : 'text-muted-foreground'}  transition-colors hover:text-foreground`}
+            className={`link ${pathname === '/search' ? 'text-foreground text-red-500' : 'text-muted-foreground'}  transition-colors hover:text-foreground`}
           >
             Search
           </Link>
           <Link
             href="/chats"
-            className={`link ${pathname === '/chats' ? 'text-foreground' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
+            className={`link ${pathname === '/chats' ? 'text-foreground text-red-500' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
           >
             Chats
           </Link>
           <Link
             href="/analytics"
-            className={`link ${pathname === '/analytics' ? 'text-foreground' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
+            className={`link ${pathname === '/analytics' ? 'text-foreground text-red-500' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
           >
             Analytics
           </Link>
           <Link
             href="/settings"
-            className={`link ${pathname === '/settings' ? 'text-foreground' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
+            className={`link ${pathname === '/settings' ? 'text-foreground text-red-500' : 'text-muted-foreground'} transition-colors hover:text-foreground`}
           >
             Settings
           </Link>
@@ -84,13 +84,13 @@ export function NavMenuSidebar() {
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6" />
-                <span className="sr-only">Ororo</span>
+                <span className="sr-only">Toakes</span>
               </Link>
               <div className="flex flex-row">
                 <div className="mt-0"><Grid3X3Icon /></div>
                 <Link
                 href="/"
-                className={`link ${pathname === '/' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">All</span>
               </Link>
@@ -100,7 +100,7 @@ export function NavMenuSidebar() {
                 <div className="mt-0"><Search /></div>
                 <Link
                 href="/search"
-                className={`link ${pathname === '/search' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/search' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">Search</span>
               </Link>
@@ -111,7 +111,7 @@ export function NavMenuSidebar() {
                 <div className="mt-0"><PenSquareIcon /></div>
                 <Link
                 href="/create-post"
-                className={`link ${pathname === '/create-post' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/create-post' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">New Post</span>
               </Link>
@@ -121,7 +121,7 @@ export function NavMenuSidebar() {
                 <div className="mt-0"><BarChart4Icon /></div>
                 <Link
                 href="/analytics"
-                className={`link ${pathname === '/analytics' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/analytics' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">Analytics</span>
               </Link>
@@ -131,7 +131,7 @@ export function NavMenuSidebar() {
                 <div className="mt-0"><MessageCircleIcon /></div>
                 <Link
                 href="/chats"
-                className={`link ${pathname === '/chats' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/chats' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">Chats</span>
               </Link>
@@ -141,21 +141,21 @@ export function NavMenuSidebar() {
                 <div className="mt-0"><Settings2Icon /></div>
                 <Link
                 href="/settings"
-                className={`link ${pathname === '/settings' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/settings' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">Settings</span>
               </Link>
               </div>
-
+{/* 
                            <div className="flex flex-row">
                 <div className="mt-0"><HelpCircleIcon /></div>
                 <Link
                 href="/support"
-                className={`link ${pathname === '/support' ? 'text-foreground' : 'text-muted-foreground'} hover:bg-slate-400`}
+                className={`link ${pathname === '/support' ? 'text-foreground text-red-500' : 'text-muted-foreground'}`}
               >
                 <span className="pl-2 active">Support</span>
               </Link>
-              </div>
+              </div> */}
 
                            <div className="flex flex-row">
                 <div className="mt-0"><LogOutIcon /></div>
@@ -202,7 +202,7 @@ export function NavMenuSidebar() {
               <DropdownMenuItem>Support</DropdownMenuItem>
               </Link>
               <Link href="/create-post">
-              <DropdownMenuItem>New Post</DropdownMenuItem>
+              <DropdownMenuItem>Dark mode</DropdownMenuItem>
               </Link>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Logout</DropdownMenuItem>
